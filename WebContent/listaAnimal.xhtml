@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11-transational.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	 xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:c="http://xmlns.jcp.org/jsp/jstl/core" 
+	xmlns:b="http://bootsfaces.net/ui" >
+<h:head>
+	<meta  http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	<title>ADOTE-ME</title>
+</h:head>
+
+<h:body style="background-color:#F5F5F5;">
+<b:navBar brand="ADOCÃO" brandHref="index.jsf" fluid="true" class="navbar navbar-dark bg-primary" style="background-color: #4682B4;" >
+  <f:facet name="kebab">
+      <span class="fa fa-chevron-right"></span>
+  </f:facet>
+  <b:navbarLinks>
+    <b:navLink value="Animais abandonados" href="animalabandono.jsf"></b:navLink>
+    <b:navLink value="Entre em contato conosco" href="contato.jsf"></b:navLink>
+   
+  </b:navbarLinks>
+</b:navBar>
+<br></br>
+	<h1>Animais para Adoção</h1>
+	<h:form>
+	
+	
+    <b:dataTable value="#{animalBean.amigocao}" var="animal">
+    
+    <b:dataTableColumn value="#{animal.animal.nome}" />
+    <b:dataTableColumn value="#{animal.animal.raca}" />
+    <b:dataTableColumn value="#{animal.animal.idade}" />
+    <b:dataTableColumn value="#{animal.animal.vacinas}" />
+    <b:dataTableColumn value="#{animal.animal.sexo}" />
+    <b:dataTableColumn value="#{animal.telefone}" />
+    
+    
+  
+
+  </b:dataTable>
+  
+ 
+  
+		
+	
+		
+		
+	</h:form>
+</h:body>
+</html>

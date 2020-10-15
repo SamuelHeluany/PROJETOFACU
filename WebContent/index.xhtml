@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11-transational.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	 xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<meta  http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	<title>Adocão, seu dog está aqui!</title>
+</h:head>
+<h:body style="background-color:#F5F5F5;">
+<b:navBar brand="ADOCÃO" brandHref="index.jsf" fluid="true" class="navbar navbar-dark bg-primary" style="background-color: #4682B4;" >
+  <f:facet name="kebab">
+      <span class="fa fa-chevron-right"></span>
+  </f:facet>
+  <b:navbarLinks>
+    <b:navLink value="Animais abandonados" href="animalabandono.jsf"></b:navLink>
+    <b:navLink value="Entre em contato conosco" href="contato.jsf"></b:navLink>
+   
+  </b:navbarLinks>
+</b:navBar>
+		<br></br>
+<center>
+	<a></a> &nbsp; &nbsp; &nbsp;  <img src="https://i.ibb.co/PhKcpTX/adocao.png" alt="ADOTE"   style="width:300px">
+	</img>
+	
+	<h3>Entre na sua conta ou cadastre-se para adotar ou doar um animal</h3>
+</center>
+
+	<center> <h:form>
+	 <div>
+	   <h:panelGrid>
+	   <h:messages/>
+       
+       
+
+    <b:container fluid="true">
+          
+  <b:row>
+    <b:column medium-screen="2">
+     <h:outputText value="Usuário:" />
+    </b:column>
+   
+   <b:column medium-screen="4">
+   <b:inputText value="#{usuarioBean.login}" placeholder="Usuário" style="text-align:center; width:300px"/>
+      </b:column>
+   
+    <b:column medium-screen="6">
+      <b:message/>
+    </b:column>
+  </b:row>
+  <b:row>
+    <b:column medium-screen="2">
+      <h:outputText value="Senha:" />
+    </b:column>
+    <b:column medium-screen="4">
+      <b:inputSecret value="#{usuarioBean.senha}" placeholder="Senha" style="text-align:center; width:300px"/>
+    </b:column>
+    <b:column medium-screen="6">
+      <b:message />
+    </b:column>
+  </b:row>
+  <b:row>
+   
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b:commandButton value="Entrar" look="primary" action="#{usuarioBean.logar}" style="width:150px" />
+ 
+   
+    &nbsp;  <b:commandButton value="Cadastrar Usuário" action="#{usuarioBean.novo}" look="info" style="width:140px" />
+   
+  </b:row>
+
+</b:container>
+       
+</h:panelGrid>
+</div>
+
+
+         </h:form>
+</center>
+
+
+</h:body>
+</html>

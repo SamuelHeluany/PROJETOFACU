@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>Cadastro de usuário</title>
+</h:head>
+<h:body>
+<center>
+	<h1>Animal Cadastrado</h1>
+	</center>
+	<hr/>
+	<h:form acceptcharset="UTF-8">
+	
+		<h:messages />
+		<center>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nome:" for="nome"/>
+			<h:outputText value="#{animalBean.nome}"/>
+			
+			<h:outputLabel value="Raça:" for="raca"/>
+			<h:outputText value="#{animalBean.raca}"/>
+			
+			<h:outputLabel value="Vacinas:" for="vacinas"/>
+			<h:outputText value="#{animalBean.vacinas}"/>
+			
+			<h:outputLabel value="Data de Nascimento:" for="nascimento"/>
+			<h:outputText value="#{animalBean.nascimento}"/>
+			
+			<h:outputLabel value="Idade:" for="idade"/>
+			<h:outputText value="#{animalBean.idade}"/>
+			
+			<h:outputLabel value="Sexo:" for="sexo"/>
+			<h:outputText value="#{animalBean.sexo}"/>
+			<h:outputText />
+			<b:commandButton look="secondary" action="contaLogada" value="Concluído"/>
+			</h:panelGrid>
+			</center>
+	</h:form>
+	<hr />
+</h:body>
+
+</html>

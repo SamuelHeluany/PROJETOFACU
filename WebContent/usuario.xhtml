@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Cadastrar Usuário</title>
+</h:head>
+
+<h:body style="background-color:#F5F5F5;">
+<b:navBar brand="ADOCÃO" brandHref="index.jsf" fluid="true" class="navbar navbar-dark bg-primary" style="background-color: #4682B4;" >
+  <f:facet name="kebab">
+      <span class="fa fa-chevron-right"></span>
+  </f:facet>
+  <b:navbarLinks>
+    <b:navLink value="Animais abandonados" href="animalabandono.jsf"></b:navLink>
+    <b:navLink value="Entre em contato conosco" href="contato.jsf"></b:navLink>
+   
+  </b:navbarLinks>
+</b:navBar>
+<center>
+	<h1>Cadastro de Usuário</h1>
+	<h2>Cadastre-se para ver animais para adoção ou doar um animal</h2>
+	</center>
+	<hr />
+	<h:form acceptcharset="UTF-8">
+		<h:messages />
+<center>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nome:" for="nome" />
+			<h:inputText id="nome" label="Nome" value="#{usuarioBean.nome}"/>
+			
+				<h:outputLabel value="Nome de Usuário:" for="login" />
+			<h:inputText id="Login" label="Login" value="#{usuarioBean.login}"/>
+	
+			
+			<h:outputLabel value="E-mail:" for="email" />
+			<h:inputText id="email" label="e-Mail" value="#{usuarioBean.email}" />
+			
+			<h:outputLabel value="CPF:" for="cpf" />
+			<h:inputText id="cpf" label="CPF" value="#{usuarioBean.cpf}" />
+			
+			<h:outputLabel value="Telefone para contato:" for="telefone" />
+			<h:inputText id="telefone" label="Telefone" value="#{usuarioBean.telefone}" />
+			
+			<h:outputLabel value="Endereço:" for="endereco" />
+			<h:inputText id="endereco" label="Endereço" value="#{usuarioBean.endereco}" />
+			
+			<h:outputLabel value="Senha:" for="senha" />
+			<h:inputText id="senha" label="Senha" value="#{usuarioBean.senha}" />
+			    
+			
+			<h:outputLabel value="Confirmar Senha:" for="confirmasenha" />
+			<h:inputText id="confirmasenha" label="Confirmar Senha"
+				value="#{usuarioBean.confirmaSenha}" require="true" />
+			<h:outputText />
+			<b:commandButton look="info" action="#{usuarioBean.salvar}" value="Pronto, Cadastrar Usuário." size="sm" style="width:162px"/>
+		</h:panelGrid>
+		</center>
+	</h:form>
+</h:body>
+</html>

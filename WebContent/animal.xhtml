@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:b="http://bootsfaces.net/ui" >
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Cadastrar Animal</title>
+	<style>
+
+</style>
+</h:head>
+
+<h:body style="background-color:#F5F5F5;">
+<b:navBar brand="ADOCÃO" brandHref="index.jsf" fluid="true" class="navbar navbar-dark bg-primary" style="background-color: #4682B4;" >
+  <f:facet name="kebab">
+      <span class="fa fa-chevron-right"></span>
+  </f:facet>
+  <b:navbarLinks>
+    <b:navLink value="Animais abandonados" href="animalabandono.jsf" ></b:navLink>
+    <b:navLink value="Entre em contato conosco" href="contato.jsf"></b:navLink>
+   
+  </b:navbarLinks>
+</b:navBar>
+<center>
+	<h1>Cadastro do Animal</h1>
+	</center>
+	<hr />
+	<h:form acceptcharset="UTF-8">
+	
+		<h:messages />
+		
+<center>
+
+  <h:panelGrid columns="2">
+			<h:outputLabel value="Nome:" for="nome" />
+			<h:inputText id="nome" label="Nome" value="#{animalBean.nome}"/>
+			
+			<h:outputLabel value="Raça:" for="raca" />
+			<h:inputText id="raca" label="Raça" value="#{animalBean.raca}" />
+			
+			<h:outputLabel value="Vacinas:" for="vacinas" />
+			<h:inputText id="vacinas" label="Vacinas" value="#{animalBean.vacinas}" />
+			
+			<h:outputLabel value="Data de Nascimento:" for="nascimento" />
+			<h:inputText id="nascimento" label="Data de Nascimento" value="#{animalBean.nascimento}" />			
+			
+			<h:outputLabel value="Idade:" for="idade" />
+			<h:inputText id="idade" label="Idade"
+				value="#{animalBean.idade}" require="true" />
+			<h:outputLabel value="Sexo:" for="sexo" />
+			<h:inputText id="sexo" label="Sexo" value="#{animalBean.sexo}"/>
+			
+			<h:outputText />
+			
+			
+			<b:commandButton look="info" action="#{animalBean.salvar(usuarioBean.usuario.id)}" value="Pronto, Cadastrar Animal." size="sm" style="width:162px" />
+			
+	
+		</h:panelGrid>
+		</center>
+		
+	</h:form>
+</h:body>
+</html>

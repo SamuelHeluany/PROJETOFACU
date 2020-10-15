@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:b="http://bootsfaces.net/ui">
+
+<h:head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title>Cadastro do Animal</title>
+</h:head>
+<h:body>
+<center>
+	<h1>Usuário Cadastrado</h1>
+	</center>
+	<hr/>
+	<h:form acceptcharset="UTF-8">
+	
+		<h:messages />
+		<center>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Nome:" for="nome"/>
+			<h:outputText value="#{usuarioBean.nome}"/>
+			
+			<h:outputLabel value="Nome do Usuário:" for="login"/>
+			<h:outputText value="#{usuarioBean.login}"/>
+			
+		
+			
+			<h:outputLabel value="e-Mail:" for="email"/>
+			<h:outputText value="#{usuarioBean.email}"/>
+			
+			<h:outputLabel value="CPF:" for="cpf"/>
+			<h:outputText value="#{usuarioBean.cpf}"/>
+			
+			<h:outputLabel value="Telefone:" for="telefone"/>
+			<h:outputText value="#{usuarioBean.telefone}"/>
+			
+			<h:outputLabel value="Endereço:" for="endereco"/>
+			<h:outputText value="#{usuarioBean.endereco}"/>
+			
+			
+			<h:outputLabel value="Senha:" for="senha"/>
+			<h:outputText value="#{usuarioBean.senha}"/>
+			<h:outputText />
+			<b:commandButton look="secondary" action="index" value="Página Inicial"/>
+			</h:panelGrid>
+			</center>
+	</h:form>
+	<hr />
+</h:body>
+
+</html>
